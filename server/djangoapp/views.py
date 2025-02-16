@@ -106,7 +106,7 @@ def get_dealerships(request,state="All"):
 # Create a `get_dealer_details` view to render the dealer details
 def get_dealer_details(request, dealer_id):
     if(dealer_id):
-        endpoint="/fetchDealers/"+str(dealer_id)
+        endpoint="/fetchDealer/"+str(dealer_id)
         dealersdetails=get_request(endpoint)
         return JsonResponse({"status":200,"dealersdetails":dealersdetails})
     else:
