@@ -57,6 +57,7 @@ const PostReview = () => {
   });
 
   const json = await res.json();
+  console.log(json);
   if (json.status === 200) {
       window.location.href = window.location.origin+"/dealer/"+id;
   }
@@ -67,11 +68,16 @@ const PostReview = () => {
       method: "GET"
     });
     const retobj = await res.json();
+    console.log(retobj);
     
     if(retobj.status === 200) {
-      let dealerobjs = Array.from(retobj.dealer)
-      if(dealerobjs.length > 0)
-        setDealer(dealerobjs[0])
+      let dealerobjs = Array.from(retobj.dealersdetails)
+      if(dealerobjs.length > 0){
+        setDealer(dealerobjs[0]);
+        console.log(dealer);
+      }
+        
+        
     }
   }
 
