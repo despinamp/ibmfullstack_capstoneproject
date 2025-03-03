@@ -68,8 +68,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR,
-        'frontend/static'),
-        os.path.join(BASE_DIR,'frontend/build')],
+            'frontend/static'),
+            os.path.join(BASE_DIR,'frontend/build')], 
         'APP_DIRS': True,
         'OPTIONS': {
                 'context_processors': [
@@ -77,7 +77,7 @@ TEMPLATES = [
                     'django.template.context_processors.request',
                     'django.contrib.auth.context_processors.auth',
                     'django.contrib.messages.context_processors.messages',
-            ],
+                    ],
         },
     },
 ]
