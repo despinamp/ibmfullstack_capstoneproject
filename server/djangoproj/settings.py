@@ -30,10 +30,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost',
                  ('https://despinabouro-8000'
-                 '.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/')]
+                     '.theiadockernext-1-labs-prod-theiak8s'
+                      '-4-tor01.proxy.cognitiveclass.ai/')]
 CSRF_TRUSTED_ORIGINS = [
     ('https://despinabouro-8000'
-    '.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai')]
+        '.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai')]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
@@ -65,16 +66,16 @@ ROOT_URLCONF = 'djangoproj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 
+        'DIRS': [os.path.join(BASE_DIR,
         'frontend/static'),
         os.path.join(BASE_DIR,'frontend/build')],
         'APP_DIRS': True,
         'OPTIONS': {
                 'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+                    'django.template.context_processors.debug',
+                    'django.template.context_processors.request',
+                    'django.contrib.auth.context_processors.auth',
+                    'django.contrib.messages.context_processors.messages',
             ],
         },
     },
@@ -97,7 +98,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
         ('django.contrib.auth'
-        '.password_validation.UserAttributeSimilarityValidator'),
+            '.password_validation.UserAttributeSimilarityValidator'),
     },
     {
         'NAME':
@@ -141,6 +142,6 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'frontend/static'),
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'frontend/static'),
                     os.path.join(BASE_DIR, 'frontend/build'),
                     os.path.join(BASE_DIR, 'frontend/build/static')]
